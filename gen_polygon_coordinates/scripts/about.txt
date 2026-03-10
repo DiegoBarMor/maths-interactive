@@ -1,0 +1,3 @@
+Simplified compilation. Assumes a single "main.c" file and no "src" or "include" directories.
+
+Last updated: 2025/03/03

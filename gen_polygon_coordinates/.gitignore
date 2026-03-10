@@ -1,0 +1,7 @@
+desktop.ini
+.vscode/
+
+assets/
+build/
+./gen_polygon_coordinates*
+./app*
