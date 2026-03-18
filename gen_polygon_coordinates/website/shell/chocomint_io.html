@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="https://raw.githack.com/DiegoBarMor/chocomint-css/main/chocomint.min.css">
+    <link rel="stylesheet" type="text/css" href=style.css>
+  </head>
+
+  <body>
+    <header class="dynamic-navbar" id="navbar">
+      <nav class="chocomint-nav-container">
+        <abbr title="Home DiegoBarMor"><a href="https://diegobarmor.github.io/">
+            <img class="icon-neon" src="https://raw.githack.com/DiegoBarMor/chocomint-css/main/icons/home.png" alt="Icon">
+          </a></abbr>
+        <abbr title="Toggle BG Particles">
+          <img class="icon-neon" src="https://raw.githack.com/DiegoBarMor/chocomint-css/main/icons/particles.png" alt="Icon"
+            onclick="toggle_particles()">
+        </abbr>
+        <abbr title="Toggle Theme">
+          <img class="icon-neon" src="https://raw.githack.com/DiegoBarMor/chocomint-css/main/icons/theme.png" alt="Icon"
+            onclick="toggle_theme()">
+        </abbr>
+        <div class="chocomint-nav-buttons">
+          <a class="button" href="https://diegobarmor.github.io/index.html">Index</a>
+          <select id="page-select">
+            <optgroup label="Section">
+              <option value="index">Index</option>
+            </optgroup>
+            <optgroup label="Options">
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+            </optgroup>
+          </select>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <div class="contents"> <h1>Site Title</h1>
+        <small>Template</small><br>
+        <small>By <a href="https://github.com/DiegoBarMor/">Diego Barquero Morera</a></small><br>
+
+        <h2>Description</h2>
+          <label for="msg-input">Message (fetched by WASM only upon text change):</label>
+          <input id="msg-input" type="text" placeholder="Type message..." style="width:100%; box-sizing:border-box; margin-bottom:8px;">
+
+          <canvas class=emscripten id=canvas oncontextmenu=event.preventDefault() tabindex=-1></canvas>
+          <pre id="output">{{{ SCRIPT }}}</pre>
+      </div>
+    </main>
+
+    <div id="bg-animation-container"></div>
+
+  </body>
+
+  <script src="https://raw.githack.com/DiegoBarMor/chocomint-css/main/chocomint.min.js"></script>
+  <script src="io.js"></script>
+
+</html>
